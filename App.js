@@ -17,6 +17,7 @@ export default function App() {
           resizeMode="contain"
           shouldPlay={true}
           onPlaybackStatusUpdate={setStatus}
+		  volume={1.0}
         />
       }
     </View>
