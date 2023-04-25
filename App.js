@@ -4,7 +4,7 @@ import { Video } from "expo-av";
 
 export default function App() {
   const video = useRef(null);
-  const [setStatus] = useState({});
+  const [status, setStatus] = useState({});
   return (
     <View style={styles.container}>
       {
@@ -15,6 +15,7 @@ export default function App() {
             uri: "https://58f9d53e45ea8.streamlock.net:443/wildliferomania2/live.stream_aac/manifest.mpd",
           }}
           resizeMode="contain"
+          shouldPlay={true}
           onPlaybackStatusUpdate={setStatus}
         />
       }
