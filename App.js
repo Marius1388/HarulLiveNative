@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { Video } from "expo-av";
+import { StatusBar } from "expo-status-bar";
 
 export default function App() {
   const video = useRef(null);
@@ -17,9 +18,10 @@ export default function App() {
           resizeMode="contain"
           shouldPlay={true}
           onPlaybackStatusUpdate={setStatus}
-		  volume={1.0}
+          volume={1.0}
         />
       }
+      <StatusBar style={"auto"} hidden={true} />
     </View>
   );
 }
